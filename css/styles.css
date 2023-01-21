@@ -1,0 +1,457 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+ul {
+    margin: 0;
+    padding-left: 0;
+}
+
+img {
+    display: block;
+}
+
+.list {
+    padding: 0;
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Roboto',
+            sans-serif;
+    color: #2E2F42;
+}
+
+:root {
+    --accent-color: #4D5AE5;
+    --second-font-family: 'Raleway',
+        sans-serif;
+    --second-color: #434455;
+    --dark-background-color: #2E2F42;
+    --gra: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* ============================ COMPONENTS =======*/
+
+.suptitle {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+
+/* ============================= HEADER ======= */
+
+.main-header {
+    border-bottom: 1px solid #E7E9FC;
+    background-color: #FFFFFF;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 1158px;
+}
+
+.heder-container {
+    display: flex;
+}
+
+.main-nav {
+    margin-right: auto;
+    display: flex;
+}
+
+.logotype {
+    margin-right: 76px;
+    align-items: center;
+    font-family: var(--second-font-family);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.33;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--accent-color)
+}
+
+.header-logo-part {
+    display: inline-block;
+    color: #2E2F42;
+}
+
+.menu {
+    gap: 40px;
+    display: flex;
+}
+
+.menu-link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #2E2F42;
+}
+
+.menu-link:hover,
+.menu-link:focus {
+    color: #404BBF;
+}
+
+.contacts-address {
+    font-style: normal;
+}
+
+.address-menu {
+    gap: 40px;
+    display: flex;
+}
+
+.contact-e-mail {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+}
+
+.contact-e-mail:hover,
+.contact-e-mail:focus {
+    color: #404BBF;
+}
+
+.contact-phone-number {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+}
+
+.contact-phone-number:hover,
+.contact-phone-number:focus {
+    color: #404BBF;
+}
+
+/*++++++++++++++++++++++++++++++ MAIN ++++++++++++++*/
+
+/*============================== HERO =======*/
+
+.hero {
+    background-image: var(--gra), url(../images/hero-bg.jpg);
+    padding-top: 188px;
+    padding-bottom: 188px;
+    text-align: center;
+}
+
+.main-title {
+    margin: 0 auto;
+    max-width: 496px;
+    margin-top: 0;
+    margin-bottom: 48px;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.modal-btn {
+    min-width: 169px;
+    height: 56px;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+    display: inline-block;
+    min-width: 169px;
+    text-align: center;
+    border-radius: 4px;
+    padding: 16px 32px;
+    background-color: var(--accent-color);
+    color: #FFFFFF;
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+    background: #404BBF;
+    color: #FFFFFF;
+}
+
+/*============================== PRINCIPLRS OF WORK =======*/
+
+.principles {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.principles-list {
+    gap: 24px;
+    display: flex;
+}
+
+.principles-item {
+    max-width: 264px;
+}
+
+.principles-text {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--second-color);
+}
+
+/*============================== ABOUT =======*/
+
+.about {
+    padding-bottom: 120px;
+}
+
+.about-title {
+    margin-top: 0;
+    margin-bottom: 72px;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+}
+
+.about-list {
+    gap: 24px;
+    display: flex;
+}
+
+.about-item {
+    width: calc((100% - 24px*2) / 3);
+}
+
+/*============================== OUR TEAM =======*/
+
+.team {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: #F4F4FD;
+}
+
+.team-title {
+    margin-top: 0;
+    margin-bottom: 72px;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+}
+
+.team-list {
+    gap: 24px;
+    display: flex;
+}
+
+.team-item {
+    width: calc((100% - 24px*3) / 4);
+    background: #FFFFFF;
+}
+
+.team-suptitle-text {
+    padding: 32px 16px;
+}
+
+.team-suptitle {
+    text-align: center;
+}
+
+.team-text {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--second-color);
+    margin-bottom: 8px;
+}
+
+.team-soc-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.team-soc-item {
+    width: 40px;
+    height: 40px;
+}
+
+.team-soc-link {
+    width: 100%;
+    height: 100%;
+    background-color: #4D5AE5;
+    display: block;
+    border-radius: 50%;
+}
+
+/* ======================CUSTOMER ===============*/
+
+.customer-title {
+    font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #2E2F42;
+}
+
+/*++++++++++++++++++++++++++++++ FOOTER ++++++++++++++*/
+
+.footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    outline: 1px solid red;
+    background-color: var(--dark-background-color);
+}
+
+.footer-logotype {
+    font-family: var(--second-font-family);
+    display: inline-block;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.16;
+    align-items: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+.footer-logo-part {
+    display: inline-block;
+    color: #F4F4FD;
+}
+
+.footer-text {
+    max-width: 264px;
+    padding-bottom: 0;
+    margin-top: 16;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #E7E9FC;
+}
+
+.footer-suptitle {
+    font-family: 'Roboto';
+        font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+/* ============================================ MAIN-PORTFOLIO ==*/
+
+.portfolio {
+    padding-top: 96px;
+    padding-bottom: 120px;
+}
+
+.portfolio-list {
+    justify-content: center;
+    gap: 24px;
+    display: flex;
+    margin-bottom: 72px;
+}
+
+.portfolio-btn {
+    padding: 12px 24px;
+    display: block;
+    height: 48px;
+    min-width: 69px;
+    border: 1px solid #E7E9FC;
+    border-radius: 4px;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    color: var(--accent-color);
+    background-color: #F4F4FD;
+}
+
+.portfolio-btn:hover,
+.portfolio-btn:focus {
+    color: #FFFFFF;
+    background-color: #404BBF;
+}
+
+.job-list {
+    column-gap: 24px;
+    row-gap: 48px;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.job-item {
+    width: calc((100% - 24px * 2) / 3);
+    background: #FFFFFF;
+}
+
+.job-text {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--second-color);
+}
+
+.box-suptitle-text {
+    border-left: 1px solid #E7E9FC;
+    border-bottom: 1px solid #E7E9FC;
+    border-right: 1px solid #E7E9FC;
+    padding: 32px 16px;
+}
+
