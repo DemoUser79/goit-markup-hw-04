@@ -168,6 +168,10 @@ body {
 /*============================== HERO =======*/
 
 .hero {
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 1440px;
+    margin: auto;
     background-image: var(--gra), url(../images/hero-bg.jpg);
     padding-top: 188px;
     padding-bottom: 188px;
@@ -227,6 +231,37 @@ body {
     max-width: 264px;
 }
 
+.principles-item::before {
+    background-size: 64px;
+    display: block;
+    content: '';
+    height: 112px;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-size: contain; */
+    background-color: #F4F4FD;
+}
+
+.icon-sat-antenna::before {
+    background-image: url(../images/icons.svg/satellite-antenna-a.svg);
+}
+
+.icon-clock::before {
+    background-image: url(../images/icons.svg/clock-b.svg);
+}
+
+.icon-comp::before {
+    background-image: url(../images/icons.svg/comp-c.svg);
+}
+
+.icon-cosmonaut::before {
+    background-image: url(../images/icons.svg/cosmonaut-d.svg);
+}
+
+.principles-suptitle {
+    margin-top: 8px;
+}
+
 .principles-text {
     margin-top: 0;
     margin-bottom: 0;
@@ -265,7 +300,7 @@ body {
 
 .team {
     padding-top: 120px;
-    padding-bottom: 120px;
+    padding-bottom: 110px;
     background-color: #F4F4FD;
 }
 
@@ -285,6 +320,7 @@ body {
 }
 
 .team-item {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     width: calc((100% - 24px*3) / 4);
     background: #FFFFFF;
 }
@@ -299,7 +335,6 @@ body {
 
 .team-text {
     margin-top: 0;
-    margin-bottom: 0;
     font-size: 16px;
     line-height: 1.5;
     text-align: center;
@@ -323,16 +358,30 @@ body {
     width: 100%;
     height: 100%;
     background-color: #4D5AE5;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
+}
+
+.team-soc-icon {
+    fill: #F4F4FD;
+}
+
+.team-soc-link:hover,
+.team-soc-link:focus {
+    background-color: #404BBF;
 }
 
 /* ======================CUSTOMER ===============*/
 
-.customer-title {
-    font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 700;
+.customers {
+    padding-top: 130px;
+    padding-bottom: 120px;
+}
+
+.customers-title {
+    margin: 0 auto 72px;
     font-size: 36px;
     line-height: 1.11;
     text-align: center;
@@ -341,6 +390,41 @@ body {
     color: #2E2F42;
 }
 
+.customers-list {
+    justify-content: center;
+    display: flex;
+    gap: 24px;
+}
+
+.customers-item {
+    width: calc((100% - 24px*5) / 6);
+    height: 88px;
+}
+
+.customers-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid #8E8F99;
+    width: 100%;
+    height: 100%;
+    color: #8E8F99;
+}
+
+.customers-icon {
+    fill: currentColor;
+}
+
+.customers-link:is(:hover, :focus) {
+    border-color: #404BBF;
+    color: #404BBF;
+}
+
+/* .customers-link:is(:hover, :focus) .customers-icon {
+    fill: #404BBF;
+} */
+
 /*++++++++++++++++++++++++++++++ FOOTER ++++++++++++++*/
 
 .footer {
@@ -348,6 +432,11 @@ body {
     padding-bottom: 100px;
     outline: 1px solid red;
     background-color: var(--dark-background-color);
+}
+
+.footer-container {
+    display: flex;
+    gap: 120px;
 }
 
 .footer-logotype {
@@ -379,13 +468,41 @@ body {
 }
 
 .footer-suptitle {
-    font-family: 'Roboto';
-        font-style: normal;
+    margin: 0 auto 16px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #FFFFFF;
+}
+
+.footer-soc-list {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.footer-soc-item {
+    width: 40px;
+    height: 40px;
+}
+
+.footer-soc-link {
+    background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.foter-soc-item {
+    fill: #FFFFFF;
+}
+
+.footer-soc-link:is(:hover, :focus) {
+    background: #31D0AA;
 }
 
 /* ============================================ MAIN-PORTFOLIO ==*/
@@ -425,6 +542,7 @@ body {
 .portfolio-btn:focus {
     color: #FFFFFF;
     background-color: #404BBF;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .job-list {
@@ -455,3 +573,11 @@ body {
     padding: 32px 16px;
 }
 
+.picture-link {
+    color: #2E2F42;
+    display: inline-block;
+}
+
+.picture-link:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
